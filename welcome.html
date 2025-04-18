@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Welcome!</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+    :root {
+      --bg-color: #e6e6e6;
+      --text-color: rgb(49, 123, 141);
+      --button-bg: #007bff;
+      --button-hover: #0056b3;
+      --header-bg: #f8f9fa;
+      --link-color: #274cc7;
+    }
+
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --button-bg: #1e88e5;
+      --button-hover: #1565c0;
+      --header-bg: #1f1f1f;
+      --link-color: #90caf9;
+    }
+
+    
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .theme-toggle {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .theme-toggle button {
+      background: var(--button-bg);
+      color: #fff;
+      border: none;
+      padding: 5px 15px;
+      margin-right: 45px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .theme-toggle button:hover {
+      background: var(--button-hover);
+    }
+
+    h1 {
+      font-size: 3em;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: underline;
+      font-size: 1em;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    img {
+      width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .header {
+      background-color: var(--header-bg);
+      display: flex;
+      padding: 20px;
+      top: 0;
+      position: fixed;
+      width: 100%;
+      align-items: center;
+      left: 0;
+      z-index: 1000;
+      justify-content: space-between;
+      text-align: center;
+      border-bottom: 2px solid #ccc;
+    }
+
+    .header img {
+      border: 2px solid chocolate;
+      width: 50px;
+      border-radius: 25px;
+      height: auto;
+    }
+
+    .header h1 {
+      margin: 10px 0;
+      font-size: 2.5em;
+    }
+
+    .header p {
+      font-size: 1.2em;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 50;
+    }
+
+    .navbar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    .navbar li {
+      margin: 0 15px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      font-size: 1.2em;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: #000;
+    }
+
+    .navbar a.active {
+      background-color: #007bff;
+    }
+
+    .navbar a.active:hover {
+      background-color: #0056b3;
+    }
+
+    .btn {
+      background-color: var(--button-bg);
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.2em;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: var(--button-hover);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      margin-right: 20px;
+    }
+
+    .logo h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    .logo p {
+      font-size: 1.2em;
+    }
+
+    .logo h1, .logo p {
+      margin: 0;
+    }
+
+    footer {
+      background-color: var(--header-bg);
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      border-top: 2px solid #ccc;
+    }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <div class="logo">
+                    <div>
+                        <h1>Code Crafters</h1>
+                        <p>Your one-stop solution for coding tutorials and resources.</p>
+                    </div>
+                </div>
+                <nav class="navbar">
+                    <ul>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                        <li>
+                            <a href="home.html">Logout</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="theme-toggle">
+                    <button id="themeToggleBtn">
+                        <i class="fa fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <h1>🎉 Welcome to the Dashboard!</h1>
+        <p>You’ve successfully registered.</p>
+        <a class="btn" href="home.html">Back to Login</a>
+        <footer>
+            <p>&copy; 2025 Code Crafters. All rights reserved.</p>
+            <p>
+                Follow us on:
+                <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                |
+                <a href="https://www.twitter.com" target="_blank">Twitter</a>
+                |
+                <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            </p>
+        </footer>
+        <script>
+    const themeToggleBtn = document.getElementById("themeToggleBtn");
+    const body = document.body;
+
+    // Load saved theme
+    if (localStorage.getItem("theme") === "dark") {
+      body.classList.add("dark");
+      themeToggleBtn.innerHTML = '<i class="fa fa-sun"></i>';
+    }
+
+    themeToggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark");
+      header.classList.toggle("header");
+      if (body.classList.contains("dark"),header.classList.contains("dark")) {
+        localStorage.setItem("theme", "dark");
+        themeToggleBtn.innerHTML = '<i class="fa fa-sun"></i>';
+        
+      } else {
+        localStorage.setItem("theme", "light");
+        themeToggleBtn.innerHTML = '<i class="fa fa-moon"></i>';
+      }
+    });
+        </script>
+    </body>
+</html>
